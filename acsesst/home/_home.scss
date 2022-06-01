@@ -9,59 +9,6 @@ p {
     padding: 0;
 }
 
-nav {
-    width: 90%;
-    height: 50px;
-    margin-left: 5%;
-    display: flex;
-    justify-content: space-between;
-
-    .nav_left {
-        width: 20%;
-    }
-    .nav_center {
-        width: 40%;
-        height: 50px;
-        display: flex;
-        justify-content: space-evenly;
-        padding: 15px 0;
-    }
-    .nav-text1 {
-        &:hover {
-            border-bottom: 1px solid;
-        }
-    }
-
-    .nav_right {
-        width: 20%;
-
-        button {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 20px;
-            background-color: white;
-
-            a {
-                color: black;
-
-                &:hover {
-                    color: white;
-                }
-            }
-
-            i {
-                padding-left: 15px;
-            }
-            &:hover {
-                background-color: #ff6f00;
-            }
-        }
-    }
-}
-
 #container-box {
     width: 100%;
     img {
@@ -75,6 +22,32 @@ nav {
 
         .photo-box{
             position: relative;
+
+            .number-text{
+                position: absolute;
+                top:15px;
+                right: 15px;
+                background-color: #ff6f00;
+                z-index: +1;
+                color: #fff;
+                width: 50px;
+                height: 25px;
+                text-align: center;
+            }
+
+            .text-box{
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                background-color: #ff6f00;
+                color: #fff;
+                width: 50px;
+                height: 25px;
+                z-index: +1;
+                text-align: center;
+                font-size: 1rem;
+                font-weight: bold;
+            }
         }
         .table {
             width: 100%;
@@ -112,7 +85,6 @@ nav {
             right: 15px;
             transition: 1s ease-in-out;
             transform: translateX(80px);
-
             ul {
                 padding: 0;
                 li {
@@ -138,7 +110,10 @@ nav {
             width: 40px;
             height: 40px;
             background-color: black;
-            border-radius: 100%;
+            // border-radius: 100%;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 100%;
+            border-bottom-right-radius: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -181,8 +156,49 @@ nav {
 
 
 .anima-table{
-    width: 90%;
+    width: 100%;
     height: auto;
-    border: 1px solid;
     display: flex;
+
+
+}
+
+.left{
+    width: 100%;
+
+    .text{
+        width: 100%;
+        height: 150px;
+        font-size: 1.5rem;
+
+        span{
+            font-weight:bold;
+            color: #ff6f00;
+            font-size: 2rem;
+        }
+
+        .img-text{
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            
+
+            img{
+                border: 1px solid;
+                opacity: .4;
+                padding-left: 5px;
+
+                // animation: ;
+                
+
+                &:hover{
+                    opacity: 1;
+                }
+            }
+            
+            div{
+                padding-left: 5px;
+            }
+        }
+    }
 }
